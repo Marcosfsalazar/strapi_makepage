@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_icons",
+  "info": {
+    "name": "icons",
+    "icon": "icons"
+  },
+  "options": {},
+  "attributes": {
+    "icons": {
+      "collection": "icons"
+    }
+  }
+}

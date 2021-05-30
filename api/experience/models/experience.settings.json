@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "name": "Experience",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Company": {
+      "type": "string",
+      "required": true
+    },
+    "initialDate": {
+      "type": "date",
+      "required": true
+    },
+    "finalDate": {
+      "type": "date"
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "details": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "experiences"
+    }
+  }
+}

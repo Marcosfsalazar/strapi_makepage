@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/personal-cards",
+      "handler": "personal-card.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/personal-cards/count",
+      "handler": "personal-card.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/personal-cards/:id",
+      "handler": "personal-card.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/personal-cards",
+      "handler": "personal-card.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/personal-cards/:id",
+      "handler": "personal-card.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/personal-cards/:id",
+      "handler": "personal-card.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

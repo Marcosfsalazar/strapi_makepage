@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_contacts",
+  "info": {
+    "name": "userContact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_contacts"
+    }
+  }
+}

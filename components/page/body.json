@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_bodies",
+  "info": {
+    "name": "body",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "pageBody": {
+      "type": "text",
+      "required": true
+    },
+    "pageCss": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personal_cards",
+  "info": {
+    "name": "PersonalCard",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profilePicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.icons"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "personal_cards"
+    }
+  }
+}
