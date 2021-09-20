@@ -71,10 +71,6 @@
       "via": "users_permissions_user",
       "collection": "personal-card"
     },
-    "landing_pages": {
-      "via": "users_permissions_user",
-      "collection": "landing-page"
-    },
     "experiences": {
       "via": "users_permissions_user",
       "collection": "experience"

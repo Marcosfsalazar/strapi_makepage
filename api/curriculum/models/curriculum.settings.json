@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curricula",
+  "info": {
+    "name": "Curriculum",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "required": true,
+      "type": "integer"
+    },
+    "data": {
+      "type": "json",
+      "required": false
+    }
+  }
+}
