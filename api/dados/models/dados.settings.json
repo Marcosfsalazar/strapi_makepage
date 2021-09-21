@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "cards",
+  "collectionName": "dados",
   "info": {
-    "name": "Card",
+    "name": "dados",
     "description": ""
   },
   "options": {
@@ -12,15 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "data": {
-      "type": "json"
-    },
-    "userId": {
+    "visits": {
+      "type": "integer",
       "required": true,
-      "unique": false,
+      "default": 0
+    },
+    "cardId": {
       "type": "integer"
     },
-    "dadoId": {
+    "currId": {
       "type": "integer"
     }
   }

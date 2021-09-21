@@ -19,6 +19,9 @@
     "data": {
       "type": "json",
       "required": false
+    },
+    "dadoId": {
+      "type": "integer"
     }
   }
 }
