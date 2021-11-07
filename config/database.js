@@ -1,4 +1,4 @@
-require('dotenv/config');
+const parse = require("pg-connection-string").parse;
 
 const credentials = {
   host:process.env.HOST,
@@ -9,7 +9,32 @@ const credentials = {
   ssl: process.env.DATABASE_SSL === 'true'
 }
 
-module.exports = ({ env }) => ({
+module.exports = ({ env }) => {
+
+  if(env('NODE_ENV') === 'production'){
+    const config = parse(process.env.DATABASE_URL);
+    return {
+      defaultConnection: 'default',
+      connections: {
+        default: {
+          connector: 'bookshelf',
+          settings: {
+            client: 'postgres',
+            host: config.host,
+            port: config.port,
+            database: config.database,
+            username: config.user,
+            password: config.password,
+          },
+          options: {
+            ssl: false,
+          },
+        },
+      },
+    }
+  }
+
+  return {
   defaultConnection: 'default',
   connections: {
     default: {
@@ -26,4 +51,4 @@ module.exports = ({ env }) => ({
       options: {}
     },
   },
-});
+}};
