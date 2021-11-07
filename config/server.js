@@ -8,7 +8,7 @@ const credentials = {
 
 module.exports = ({ env }) => ({
   host: env('HOST', credentials.host),
-  port: env.int('PORT', credentials.strapi_port),
+  port: env.int('STRAPI_PORT', credentials.strapi_port),
   admin: {
     auth: {
       secret: env('ADMIN_JWT_SECRET', credentials.jwt_secret),

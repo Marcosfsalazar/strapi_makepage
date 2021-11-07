@@ -2,10 +2,10 @@ require('dotenv/config');
 
 const credentials = {
   host:process.env.HOST,
-  port:parseInt(process.env.PORT),
+  port:parseInt(process.env.DATABASE_PORT),
   database_name:process.env.DATABASE_NAME,
   username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_USERNAME,
+  password: process.env.DATABASE_PASSWORD,
   ssl: process.env.DATABASE_SSL === 'true'
 }
 
