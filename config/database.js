@@ -1,16 +1,15 @@
 const parse = require("pg-connection-string").parse;
 
 const credentials = {
-  host:process.env.HOST,
-  port:parseInt(process.env.DATABASE_PORT),
-  database_name:process.env.DATABASE_NAME,
-  username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_PASSWORD,
-  ssl: process.env.DATABASE_SSL === 'true'
+  host:process.env.HOST || "127.0.0.1",
+  port:parseInt(process.env.DATABASE_PORT) || 5432,
+  database_name:process.env.DATABASE_NAME || 'database',
+  username: process.env.DATABASE_USERNAME || 'user',
+  password: process.env.DATABASE_PASSWORD || 'password',
+  ssl: process.env.DATABASE_SSL === 'true' || false
 }
 
 module.exports = ({ env }) => {
-
   if(env('NODE_ENV') === 'production'){
     const config = parse(process.env.DATABASE_URL);
     return {
